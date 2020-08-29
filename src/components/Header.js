@@ -1,9 +1,5 @@
 import React from "react";
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from "react-bootstrap/Button";
-import Image from "react-bootstrap/Image";
-import {NavLink} from "react-bootstrap";
+import {Row, Col, Button, NavLink, Image} from 'react-bootstrap';
 
 import logo from '../images/logo.png';
 
@@ -25,7 +21,40 @@ const HeaderStyle = styled.div`
 
 `;
 
+
 const Header = () => {
+    // Варіант №1
+    // const chess =() => {
+    //     let a = "# # # #";
+    //     for (let i = 0; i <= 5; i++) {
+    //         if (i % 2 !== 0) {
+    //             console.log(`${a}`)
+    //         } else {
+    //             console.log(` ${a}`)
+    //         }
+    //     }
+    // }
+
+    // Варіант №2
+    const chess = () => {
+        let a = '';
+        let b = '';
+        for (let i = 0; i <= 9; i++) {
+            if (i % 2 !== 0) {
+                a += `# `;
+            } else {
+                b += ` #`;
+            }
+        }
+        for (let j = 0; j <= 5; j++) {
+            if (j % 2 !== 0) {
+                console.log(a);
+            } else {
+                console.log(b);
+            }
+        }
+    }
+
     return (
         <HeaderStyle>
             <Row>
@@ -35,7 +64,7 @@ const Header = () => {
                             <Image className="logo" src={logo} thumbnail/>
                         </NavLink>
                     </div>
-                    <Button ClassName="header_btn" variant="primary">Шахова дошка</Button>
+                    <Button onClick={chess} className="header_btn" variant="primary">Шахова дошка</Button>
                 </Col>
             </Row>
         </HeaderStyle>

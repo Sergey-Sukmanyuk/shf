@@ -4,6 +4,7 @@ import react from '../images/react.png'
 import ModalWindow from "./ModalWindow";
 
 
+
 const Content = () => {
     return (
         <>

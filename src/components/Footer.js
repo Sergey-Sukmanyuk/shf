@@ -21,7 +21,7 @@ const Footer = () =>{
             <Row>
                 <Col lg={12} className="footer">
 
-                    <div className="copyright"> &copy; 2020 Sergey Sukmanyu</div>
+                    <div className="copyright"> &copy; 2020 Sergey Sukmanyuk</div>
                 </Col>
             </Row>
         </FooterStyle>

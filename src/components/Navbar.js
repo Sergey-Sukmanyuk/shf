@@ -1,17 +1,27 @@
 import React from "react";
-import Nav from "react-bootstrap/Nav";
+import {ListGroup} from "react-bootstrap";
 
+import styled from "styled-components";
+
+const NavWrapper = styled.div`
+.navList {
+    width: 255px;
+ 
+}
+`;
 
 const Navbar = () => {
     return (
-        <Nav defaultActiveKey="/home" className="flex-column">
-            <Nav.Link eventKey="link-1">Link</Nav.Link>
-            <Nav.Link eventKey="link-1">Link</Nav.Link>
-            <Nav.Link eventKey="link-2">Link</Nav.Link>
-            <Nav.Link eventKey="link-2">Link</Nav.Link>
-            <Nav.Link eventKey="link-2">Link</Nav.Link>
-        </Nav>
-
+        <NavWrapper>
+            <ListGroup className="navList">
+                <ListGroup.Item> React</ListGroup.Item>
+                <ListGroup.Item>React-bootstrap, bootstrap</ListGroup.Item>
+                <ListGroup.Item>Styled component</ListGroup.Item>
+                <ListGroup.Item>Axios</ListGroup.Item>
+                <ListGroup.Item>Hooks </ListGroup.Item>
+                <ListGroup.Item>React hook form </ListGroup.Item>
+            </ListGroup>
+        </NavWrapper>
     )
 }
 export default Navbar;
